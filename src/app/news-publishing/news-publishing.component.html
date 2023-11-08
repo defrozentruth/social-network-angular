@@ -1,0 +1,8 @@
+<form class="news-input" (ngSubmit)="sendNews()">
+  <mat-form-field id="input-field">
+    <input matInput placeholder="Что нового?" autocomplete="off" [(ngModel)]="newsText" name="newsText">
+  </mat-form-field>
+  <button mat-button color="primary" type="submit">
+    Опубликовать
+  </button>
+</form>

@@ -1,0 +1,28 @@
+
+#input-field mat-form-field {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+}
+
+.message-input {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #fff; /* Фон формы */
+  border-top: 1px solid #ccc; /* Линия-разделитель */
+}
+
+#input-field {
+  flex: 1;
+  margin-right: 16px; /* Добавляет небольшой отступ между полем ввода и кнопкой */
+}
+
+#input-field mat-form-field {
+  width: 100%;
+  margin: 0;
+}

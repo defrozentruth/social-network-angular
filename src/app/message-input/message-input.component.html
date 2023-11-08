@@ -1,0 +1,8 @@
+<form class="message-input" (ngSubmit)="sendMessage()">
+  <mat-form-field id="input-field">
+    <input matInput placeholder="Введите сообщение" autocomplete="off" [(ngModel)]="messageText" name="messageText">
+  </mat-form-field>
+  <button mat-icon-button color="primary" type="submit">
+  <mat-icon>send</mat-icon>
+</button>
+</form>

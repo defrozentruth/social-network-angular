@@ -1,0 +1,34 @@
+
+#input-field mat-form-field {
+  display: flex;
+  padding: 5px;
+  align-items: center;
+}
+
+.news-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background-color: #ffffff; /* Фон формы */
+  border-bottom: 1px solid #969696; /* Линия-разделитель */
+  border-radius: 50px;
+}
+
+#input-field {
+  flex: 1;
+  margin-right: 16px; /* Добавляет небольшой отступ между полем ввода и кнопкой */
+  padding-left: 20px;
+}
+
+#input-field mat-form-field {
+  width: 100%;
+  margin: 0;
+}
+
+mat-mdc-form-field-subscript-wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  max-height: 2px;
+}

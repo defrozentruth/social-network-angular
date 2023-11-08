@@ -1,0 +1,20 @@
+<mat-toolbar color="accent">
+  <div class="buttons-container">
+    <h3>Диалог с {{friendName}}</h3>
+    <a mat-icon-button [routerLink]="['/users']"><mat-icon>supervisor_account</mat-icon></a>
+    <a mat-icon-button [routerLink]="['/chats']"><mat-icon>chat</mat-icon></a>
+    <a mat-icon-button [routerLink]="['/news-feed']"><mat-icon>article</mat-icon></a>
+    <a mat-icon-button [routerLink]="['/user', userService.user.id]"><mat-icon>home</mat-icon></a>
+  </div>
+  <button mat-icon-button (click)="AuthService.logout()">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>
+
+<section id="user-chat">
+  <ng-container id="user-chat-container" *ngFor="let elem of messages">
+    <app-message-card [message]="elem"></app-message-card>
+  </ng-container>
+</section>
+<app-message-input [friendId]="friendId"></app-message-input>
+

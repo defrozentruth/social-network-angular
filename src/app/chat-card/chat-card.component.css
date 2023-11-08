@@ -1,0 +1,4 @@
+mat-card.chat-card {
+  border-radius: 8px; /* Скругленные края */
+  margin: 8px; /* Небольшой отступ между карточками */
+}

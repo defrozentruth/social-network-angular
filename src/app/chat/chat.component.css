@@ -1,0 +1,23 @@
+#user-chat {
+  height: calc(100vh - 160px);
+  overflow-y: scroll; /* Добавить скроллбар при необходимости */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Отключить прокрутку страницы */
+  overscroll-behavior: contain; /* Запретить "перелистывание" на краях экрана */
+}
+
+/* Скрытие вертикального полосы прокрутки */
+#user-chat::-webkit-scrollbar {
+  display: none;
+}
+
+/* Стили для скролл-бара для браузеров, поддерживающих WebKit */
+#user-chat::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}

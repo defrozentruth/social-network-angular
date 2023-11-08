@@ -1,0 +1,9 @@
+<mat-card class="message-card">
+  <mat-card-content>
+    <h3>{{ message.sender_name }}</h3>
+    <p>{{ message.text }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <p>{{ formatTimestamp(message.timestamp) }}</p>
+  </mat-card-actions>
+</mat-card>

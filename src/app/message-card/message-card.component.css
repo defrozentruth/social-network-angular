@@ -1,0 +1,42 @@
+.message-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Положение текста влево */
+  padding: 8px;
+  justify-content: space-between;
+  border-radius: 8px;
+  margin: 8px; /* Ограничение максимальной ширины для сообщений */
+}
+
+.message-card h3 {
+  margin: 0;
+  font-size: 16px; /* Размер текста для имени отправителя */
+}
+
+.message-card p {
+  margin: 8px 0;
+  font-size: 14px; /* Размер текста для сообщения */
+  max-width: 100%;
+  word-wrap: anywhere;
+}
+
+.message-card .mat-card-actions {
+  display: flex;
+  justify-content: flex-end; /* Положение времени вправо */
+  padding: 0;
+}
+
+.message-card .mat-card-actions p {
+  margin: 0;
+  font-size: 12px; /* Уменьшение размера текста для времени */
+}
+
+.mat-mdc-card-content {
+  display: block;
+  padding: 0 0 0 16px;
+}
+
+.mat-mdc-card-content:first-child {
+  padding-top: 16px;
+  max-width: 85%;
+}

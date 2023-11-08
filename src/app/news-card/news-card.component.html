@@ -1,0 +1,12 @@
+<mat-card class="news-card">
+  <mat-card-title>
+    <a [routerLink]="['/user/' + news.author_id]">{{ news.author_name }}</a>
+  </mat-card-title>
+  <mat-card-content>
+    <p>{{ news.content }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <p>{{formatTimestamp(news.date)}}</p>
+  </mat-card-actions>
+</mat-card>
+

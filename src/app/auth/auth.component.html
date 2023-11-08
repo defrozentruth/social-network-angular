@@ -1,0 +1,23 @@
+<div class="login">
+  <h2 class="login-header">Log in</h2>
+  <form [formGroup]="authForm!" class="login-container" (ngSubmit)="signIn()">
+    <mat-form-field class="full-width">
+      <input matInput type="email" placeholder="Email" formControlName="email">
+      <mat-error *ngIf="isSubmitted && formControls!['email'].hasError('required')">Email is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput type="password" placeholder="Password" formControlName="password">
+      <mat-error *ngIf="isSubmitted && formControls!['password'].hasError('required')">Password is required</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" class="custom-button" type="submit">Log in</button>
+  </form>
+  <div class="register-link">
+    <p>
+      Еще нет аккаунта?
+      <a mat-button [routerLink]="['/register']">Зарегистрируйтесь прямо сейчас!</a>
+    </p>
+  </div>
+</div>
+

@@ -1,0 +1,23 @@
+<div class="register">
+  <h2 class="register-header">Create Account</h2>
+  <form [formGroup]="registerForm!" class="register-container" (ngSubmit)="submit()">
+    <mat-form-field class="full-width">
+      <input matInput type="email" placeholder="Email" formControlName="email">
+      <mat-error *ngIf="isSubmitted && formControls!['email'].hasError('required')">Email is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput type="password" placeholder="Password" formControlName="password">
+      <mat-error *ngIf="isSubmitted && formControls!['password'].hasError('required')">Password is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="full-width">
+      <input matInput type="text" placeholder="Name" formControlName="name">
+      <mat-error *ngIf="isSubmitted && formControls!['name'].hasError('required')">Name is required</mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="accent" type="submit">Create</button>
+  </form>
+</div>
+
+

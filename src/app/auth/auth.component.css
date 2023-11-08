@@ -1,0 +1,62 @@
+.login {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 16px;
+  background-color: #fff; /* Белый фон */
+  border-radius: 8px; /* Скругленные края */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-header {
+  font-size: 24px;
+  margin: 0 0 16px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+mat-error {
+  color: #f44336; /* Цвет ошибки */
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+mat-raised-button {
+  margin-top: 16px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.register-link a {
+  text-decoration: none;
+  color: #4285f4; /* Цвет ссылки */
+}
+
+.register-link a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+.custom-button{
+  background-color: #b33fe5;
+  color: white;
+}
