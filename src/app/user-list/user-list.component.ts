@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UserService} from "../service/user.service";
 import {ActivatedRoute} from "@angular/router";
 import {AuthService} from "../service/auth.service";
+import {Socket} from "ngx-socket-io";
 
 @Component({
   selector: 'app-user-list',
@@ -12,7 +13,8 @@ export class UserListComponent implements OnInit{
   users: any;
   constructor(
     public userService: UserService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private socket: Socket,
   ) {}
 
   ngOnInit() {
@@ -22,10 +24,19 @@ export class UserListComponent implements OnInit{
     })
     if(url!.startsWith('friends/')){
       this.route.paramMap.subscribe(params => {
-        this.loadFriends(parseInt(params.get('id')!))
+        const id = parseInt(params.get('id')!)
+        this.loadFriends(id)
+        this.getUsersStream().subscribe({
+          next: value => this.loadFriends(id),
+          error: console.error
+        })
       })
     } else if(url!.startsWith('users')){
       this.loadUsers()
+      this.getUsersStream().subscribe({
+        next: value => this.loadUsers(),
+        error: console.error
+      })
     }
   }
 
@@ -44,4 +55,8 @@ export class UserListComponent implements OnInit{
   }
 
   protected readonly AuthService = AuthService;
+
+  getUsersStream = () => {
+    return this.socket.fromEvent('friend')
+  }
 }

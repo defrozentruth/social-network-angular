@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'
@@ -53,5 +53,23 @@ export class UserService {
 
   public getUserFeed = () => {
     return this.http.get(`api/news/feed/${this.user.id}`)
+  }
+
+  public addFriend = (id: number) => {
+    const headers = new HttpHeaders({
+      "Content-type": "application/json"
+    })
+    this.http.post(`api/friend/${this.user.id}/${id}`, {}, { headers }).subscribe({
+      next: value => {this.user = value}
+    })
+  }
+
+  public deleteFriend = (id: number) => {
+    const headers = new HttpHeaders({
+      "Content-type": "application/json"
+    })
+    return this.http.delete(`api/friend/${this.user.id}/${id}`,{ headers }).subscribe({
+      next: value => {this.user = value}
+    })
   }
 }

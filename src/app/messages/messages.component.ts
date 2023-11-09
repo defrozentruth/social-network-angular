@@ -4,6 +4,8 @@ import {ActivatedRoute} from "@angular/router";
 import {Socket} from "ngx-socket-io";
 import {MessageService} from "../service/message.service";
 import {AuthService} from "../service/auth.service";
+import {UserCardsDialogComponent} from "../user-cards-dialog/user-cards-dialog.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-messages',
@@ -16,7 +18,8 @@ export class MessagesComponent implements OnInit{
     public userService: UserService,
     private messageService: MessageService,
     private route: ActivatedRoute,
-    private socket: Socket
+    private socket: Socket,
+    private dialog: MatDialog
   ) {}
 
   ngOnInit() {
@@ -46,5 +49,20 @@ export class MessagesComponent implements OnInit{
   private getMessageStream = () => {
     return this.socket.fromEvent('message')
   }
+
   protected readonly AuthService = AuthService;
+
+  openUserCardsDialog(): void {
+    const dialogRef = this.dialog.open(UserCardsDialogComponent, {
+      width: '400px', // Укажите ширину окна по вашим требованиям
+      height: '70%',
+      id: "modal-dialog",
+      data: this.chats
+    });
+
+    dialogRef.afterClosed().subscribe({
+      complete: () => console.log('Диалоговое окно было закрыто'),
+      error: console.error
+    });
+  }
 }

@@ -36,7 +36,7 @@ export class AuthService {
   static async logout() {
     this.userService.removeToken()
     this.userService.removeUserData()
-    AuthService.router.navigateByUrl('/login')
+    await AuthService.router.navigateByUrl('/login')
   }
 
   public isLoggedIn() {

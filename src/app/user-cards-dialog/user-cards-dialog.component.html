@@ -1,0 +1,7 @@
+<h2>Список пользователей</h2>
+<section class="users-list" *ngFor="let user of users">
+  <app-user-card [user]="user"></app-user-card>
+</section>
+<div class="close-button-container">
+  <button mat-button class="close-button" (click)="onCloseClick()">Закрыть</button>
+</div>

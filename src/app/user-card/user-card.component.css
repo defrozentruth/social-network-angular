@@ -1,0 +1,8 @@
+mat-card.user-card {
+  border-radius: 8px; /* Скругленные края */
+  margin: 20px; /* Небольшой отступ между карточками */
+}
+
+mat-card-title, mat-card-actions{
+  padding: 15px;
+}

@@ -18,5 +18,9 @@
         <p>{{ user.email }}</p>
       </div>
     </a>
+    <p>
+      <button mat-button color="primary" *ngIf="user.id !== userService.user.id && !userService.user.friends.includes(user.id)" (click)="userService.addFriend(user.id)">Добавить в друзья</button>
+      <button mat-button color="warn" *ngIf="user.id !== userService.user.id && userService.user.friends.includes(user.id)" (click)="userService.deleteFriend(user.id)" >Удалить из друзей</button>
+    </p>
   </mat-card>
 </section>

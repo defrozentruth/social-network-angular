@@ -31,6 +31,8 @@ import { MessageCardComponent } from './message-card/message-card.component';
 import { MessageInputComponent } from './message-input/message-input.component';
 import { NewsPublishingComponent } from './news-publishing/news-publishing.component';
 import { UserCardComponent } from './user-card/user-card.component';
+import {MatDialogModule, MatDialogRef} from "@angular/material/dialog";
+import { UserCardsDialogComponent } from './user-cards-dialog/user-cards-dialog.component';
 
 const routes: Routes = [
   {path: 'login', component: AuthComponent},
@@ -56,6 +58,7 @@ const config: SocketIoConfig = {url: 'http://localhost:8080', options: {}};
     NewsPublishingComponent,
     NewsCardComponent,
     UserCardComponent,
+    UserCardsDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ const config: SocketIoConfig = {url: 'http://localhost:8080', options: {}};
     MatCardModule,
     MatToolbarModule,
     MatIconModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule,
   ],
   providers: [UserService, AuthService, {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}, MessageService],
   exports: [RouterModule],

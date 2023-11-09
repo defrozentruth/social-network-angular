@@ -10,6 +10,7 @@
   </button>
 </mat-toolbar>
 
+<button mat-raised-button (click)="openUserCardsDialog()"> Начать диалог</button>
 <section id="user-chats">
   <ng-container *ngFor="let elem of chats">
     <app-chat-card [chat]="elem"></app-chat-card>
