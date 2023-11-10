@@ -15,6 +15,14 @@
     <mat-card class="user-details">
       <mat-card-title>{{ user.name }}</mat-card-title>
       <mat-card-content>
+        <img alt="{{user.name}}" [src]="image?.image_url">
+        <ng-container *ngIf="user.id == this.userService.user.id">
+          <button mat-raised-button class="edit-photo-button" (click)="this.editImage()">Изменить фото</button>
+          <input type="file" #fileInput (change)="this.imageService.onFileSelected($event)" accept="image/*" style="display: none">
+          <button mat-raised-button class="delete-photo-button" [disabled]="image?.image_url === 'http://localhost:8080/img/default.jpg'" (click)="this.imageService.deleteImage()">
+            Удалить фото
+          </button>
+        </ng-container>
         <p>Дата рождения: {{ user.date ? user.date.slice(0, 10) : "" }}</p>
         <p>Почта: {{ user.email }}</p>
         <p><a [routerLink]="'/friends/' + user.id">Список друзей пользователя</a></p>
@@ -28,7 +36,7 @@
     </ng-container>
 
     <h2>Новости пользователя</h2>
-    <ng-container *ngFor="let elem of news">
+    <ng-container *ngFor="let elem of news?.reverse()">
       <app-news-card [news]="elem"></app-news-card>
     </ng-container>
   </section>

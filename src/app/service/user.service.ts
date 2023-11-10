@@ -51,6 +51,20 @@ export class UserService {
     return this.http.get(`api/news/${id}`)
   }
 
+  public getUserImage = (id: number) => {
+    return this.http.get(`api/image/${id}`)
+  }
+
+  public updateUserImage = (file: File) => {
+    const imageData = new FormData()
+    imageData.append('image', file)
+    return this.http.post(`api/image/${this.user.id}`, imageData)
+  }
+
+  public deleteImage = () => {
+    return this.http.delete(`api/image/${this.user.id}`)
+  }
+
   public getUserFeed = () => {
     return this.http.get(`api/news/feed/${this.user.id}`)
   }
