@@ -12,10 +12,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 1em;
-
-  a {
-    text-decoration: none;
-  }
 }
 
 mat-card.user-item {
@@ -27,6 +23,8 @@ mat-card.user-item {
   text-align: center;
   width: 300px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для плоского дизайна */
+  display: flex;
+  align-items: center;
 }
 
 .user-item img {
@@ -37,6 +35,33 @@ mat-card.user-item {
   object-fit: cover;
 }
 
-.user-info {
-  font-size: 1.2em;
+.user-info h3 {
+  font-size: 1.5em; /* Увеличиваем размер шрифта для имени пользователя */
+}
+
+.user-info p {
+  font-size: 1em;
+  color: #555; /* Цвет текста информации о пользователе */
+}
+
+.buttons-container {
+  display: flex;
+  align-items: center;
+}
+
+.buttons-container h3 {
+  margin-right: 1em;
+}
+
+mat-icon {
+  color: #fff; /* Цвет иконок */
+}
+
+.simpleLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+#users-container button {
+  margin-top: 8px; /* Отступ между кнопками */
 }
