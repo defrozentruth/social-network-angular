@@ -1,4 +1,4 @@
-<mat-toolbar color="accent">
+<mat-toolbar>
   <div class="buttons-container">
     <h3>Сообщения</h3>
     <a mat-icon-button [routerLink]="['/news-feed']"><mat-icon>article</mat-icon></a>
@@ -10,7 +10,7 @@
   </button>
 </mat-toolbar>
 
-<button mat-raised-button color="accent" (click)="openUserCardsDialog()"> Начать диалог</button>
+<button mat-raised-button class="custom-button" (click)="openUserCardsDialog()"> Начать диалог</button>
 <section id="user-chats">
   <ng-container *ngFor="let elem of chats">
     <app-chat-card [chat]="elem"></app-chat-card>

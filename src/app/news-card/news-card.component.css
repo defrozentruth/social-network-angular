@@ -1,8 +1,16 @@
 mat-card.news-card {
   border-radius: 8px; /* Скругленные края */
   margin: 8px; /* Небольшой отступ между карточками */
+  color: white;
+  background: black;
 }
 
 mat-card-title, mat-card-actions{
   padding: 15px;
+  font-family: "Yanone Kaffeesatz", serif;
+  color: white;
+}
+
+.name-class{
+  color: white;
 }

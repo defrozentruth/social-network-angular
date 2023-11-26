@@ -3,13 +3,15 @@
   margin: 0 auto;
   min-width: 350px;
   padding: 16px;
-  background-color: #fff; /* Белый фон */
+  background-color: black;
+  color: white;
   border-radius: 8px; /* Скругленные края */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 .register-header {
@@ -43,6 +45,8 @@ mat-raised-button {
 }
 
 .custom-button {
-  background-color: #b33fe5; /* Новый цвет кнопки */
-  color: white; /* Цвет текста кнопки */
+  background-color: white;
+  color: black;
+  border: white 2px;
+  font-family: "Yanone Kaffeesatz", serif;
 }

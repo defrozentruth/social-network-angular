@@ -1,10 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Yanone Kaffeesatz", serif;
   margin: 0;
   padding: 0;
-  background: #ffffff; /* Фоновый цвет - бело-пурпурные тона */
+  background: black;
 }
 
 #users-container {
@@ -17,9 +17,10 @@ body {
 mat-card.user-item {
   margin: 1em;
   padding: 1em;
-  background-color: #ffffff; /* Фоновый цвет карточки - белый */
+  background-color: black; /* Фоновый цвет карточки - белый */
   border: 1px solid #ddd;
-  border-radius: 5px;
+  color: white;
+  border-radius: 15px;
   text-align: center;
   width: 300px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для плоского дизайна */
@@ -41,12 +42,13 @@ mat-card.user-item {
 
 .user-info p {
   font-size: 1em;
-  color: #555; /* Цвет текста информации о пользователе */
+  color: white; /* Цвет текста информации о пользователе */
 }
 
 .buttons-container {
   display: flex;
   align-items: center;
+  color:black;
 }
 
 .buttons-container h3 {
@@ -54,7 +56,7 @@ mat-card.user-item {
 }
 
 mat-icon {
-  color: #fff; /* Цвет иконок */
+  color: black; /* Цвет иконок */
 }
 
 .simpleLink {

@@ -1,5 +1,5 @@
 <div *ngIf="user">
-  <mat-toolbar color="accent">
+  <mat-toolbar>
     <div class="buttons-container">
       <h3>{{ user.name }}</h3>
       <a mat-icon-button [routerLink]="['/news-feed']"><mat-icon>article</mat-icon></a>
@@ -18,9 +18,9 @@
         <div class="image-component-container">
           <img alt="{{user.name}}" [src]="image?.image_url">
           <ng-container *ngIf="user.id == this.userService.user.id">
-            <button mat-raised-button color="accent" class="edit-photo-button" (click)="this.editImage()">Изменить фото</button>
+            <button mat-raised-button  class="edit-photo-button" (click)="this.editImage()">Изменить фото</button>
             <input type="file" #fileInput (change)="this.imageService.onFileSelected($event)" accept="image/*" style="display: none">
-            <button mat-raised-button color="accent" class="delete-photo-button" [disabled]="image?.image_url === 'http://localhost:8080/img/default.jpg'" (click)="this.imageService.deleteImage()">
+            <button mat-raised-button  class="delete-photo-button" [disabled]="image?.image_url === 'http://localhost:8080/img/default.jpg'" (click)="this.imageService.deleteImage()">
               Удалить фото
             </button>
           </ng-container>
@@ -29,6 +29,9 @@
           <p>Дата рождения: {{ user.date ? user.date.slice(0, 10) : "" }}</p>
           <p>Почта: {{ user.email }}</p>
           <p><a [routerLink]="'/friends/' + user.id">Список друзей пользователя</a></p>
+          <ng-container *ngIf="user.role == 'admin'">
+            <p><a [routerLink]="'/admin/'">Панель администрирования</a></p>
+          </ng-container>
         </div>
       </mat-card-content>
     </mat-card>
@@ -41,7 +44,7 @@
 
     <h2>Новости пользователя</h2>
     <ng-container *ngFor="let elem of news?.reverse()">
-      <app-news-card [news]="elem"></app-news-card>
+      <app-news-card class="news-card" [news]="elem"></app-news-card>
     </ng-container>
   </section>
 </div>

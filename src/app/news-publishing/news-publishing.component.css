@@ -3,6 +3,7 @@
   display: flex;
   padding: 5px;
   align-items: center;
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 .news-input {
@@ -13,17 +14,20 @@
   background-color: #ffffff; /* Фон формы */
   border-bottom: 1px solid #969696; /* Линия-разделитель */
   border-radius: 50px;
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 #input-field {
   flex: 1;
   margin-right: 16px; /* Добавляет небольшой отступ между полем ввода и кнопкой */
   padding-left: 20px;
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 #input-field mat-form-field {
   width: 100%;
   margin: 0;
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 mat-mdc-form-field-subscript-wrapper {
@@ -31,4 +35,5 @@ mat-mdc-form-field-subscript-wrapper {
   width: 100%;
   position: relative;
   max-height: 2px;
+  font-family: "Yanone Kaffeesatz", serif;
 }

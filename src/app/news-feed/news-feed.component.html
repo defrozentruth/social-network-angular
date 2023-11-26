@@ -1,4 +1,4 @@
-<mat-toolbar color="accent">
+<mat-toolbar color="white" background="black">
   <div class="buttons-container">
     <h3>Новости</h3>
     <a mat-icon-button [routerLink]="['/users']"><mat-icon>supervisor_account</mat-icon></a>
@@ -10,7 +10,7 @@
   </button>
 </mat-toolbar>
 
-<section id="user-feed">
+<section id="user-feed" class="feed-class">
   <ng-container *ngFor="let elem of news">
     <app-news-card [news]="elem"></app-news-card>
   </ng-container>

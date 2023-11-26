@@ -1,6 +1,6 @@
 <mat-card class="news-card">
   <mat-card-title>
-    <a [routerLink]="['/user/' + news.author_id]">{{ news.author_name }}</a>
+    <a class="name-class" [routerLink]="['/user/' + news.author_id]">{{ news.author_name }}</a>
   </mat-card-title>
   <mat-card-content>
     <p>{{ news.content }}</p>

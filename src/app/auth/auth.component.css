@@ -3,7 +3,8 @@
   margin: 0 auto;
   max-width: 350px;
   padding: 16px;
-  background-color: #fff; /* Белый фон */
+  background-color: black;
+  color: white;
   border-radius: 8px; /* Скругленные края */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень */
   position: absolute;
@@ -49,7 +50,7 @@ mat-raised-button {
 
 .register-link a {
   text-decoration: none;
-  color: #4285f4; /* Цвет ссылки */
+  color: white; /* Цвет ссылки */
 }
 
 .register-link a:hover {
@@ -57,6 +58,8 @@ mat-raised-button {
 }
 
 .custom-button{
-  background-color: #b33fe5;
-  color: white;
+  background-color: white;
+  color: black;
+  border: white 2px;
+  font-family: "Yanone Kaffeesatz", serif;
 }

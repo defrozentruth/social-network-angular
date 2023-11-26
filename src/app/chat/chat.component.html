@@ -1,4 +1,4 @@
-<mat-toolbar color="accent">
+<mat-toolbar>
   <div class="buttons-container">
     <h3>Диалог с {{friendName}}</h3>
     <a mat-icon-button [routerLink]="['/users']"><mat-icon>supervisor_account</mat-icon></a>
@@ -13,7 +13,7 @@
 
 <section id="user-chat">
   <ng-container id="user-chat-container" *ngFor="let elem of messages">
-    <app-message-card [message]="elem"></app-message-card>
+    <app-message-card class="msg-class" [message]="elem"></app-message-card>
   </ng-container>
 </section>
 <app-message-input [friendId]="friendId"></app-message-input>

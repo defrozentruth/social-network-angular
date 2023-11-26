@@ -3,6 +3,7 @@
   overflow-y: scroll; /* Добавить скроллбар при необходимости */
   scrollbar-width: none;
   -ms-overflow-style: none;
+  background: black;
 }
 
 html, body {
@@ -20,4 +21,15 @@ html, body {
 #user-chat::-webkit-scrollbar {
   width: 0;
   height: 0;
+}
+
+#user-chat-container{
+  font-family: "Yanone Kaffeesatz", serif;
+  background: black;
+  color: white;
+  border-radius: 15px;
+}
+
+.msg-class{
+  background: black;
 }

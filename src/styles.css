@@ -2,14 +2,14 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Yanone Kaffeesatz', serif;
   margin: 0;
   padding: 0;
-  background: #eeeeee; /* Фоновый цвет - бело-пурпурные тона */
+  background: #ffffff;
 }
 
 header {
-  background-color: #ec2cff; /* Фоновый цвет заголовка - пурпурный */
+  background-color: black;
   color: white;
   padding: 20px;
   text-align: center;
@@ -56,12 +56,17 @@ html, body {
 
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Yanone Kaffeesatz', serif;
 }
 
 mat-toolbar{
   display: flex;
   justify-content: space-between;
+  font-family: "Yanone Kaffeesatz", serif;
+  background: black;
+  color: white;
+  border: black 2px;
+  border-radius: 15px;
 }
 
 .buttons-container{

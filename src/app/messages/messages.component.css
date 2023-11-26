@@ -1,3 +1,9 @@
 button{
   margin: 20px 5px;
 }
+
+.custom-button{
+  font-family: "Yanone Kaffeesatz", serif;
+  color: white;
+  background: black;
+}

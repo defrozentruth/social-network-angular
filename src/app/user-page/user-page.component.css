@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 
 body {
-  font-family: 'Open Sans', sans-serif; /* Используем шрифт Open Sans для всего текста */
+  font-family: "Yanone Kaffeesatz", serif;
   margin: 0;
   padding: 0;
-  background: #ffffff; /* Фоновый цвет - бело-пурпурные тона */
+  background-color: black;
 }
 
 #user-info {
@@ -12,6 +12,9 @@ body {
   display: flex;
   align-items: flex-start;
   padding: 20px;
+  font-family: "Yanone Kaffeesatz", serif;
+  background: white;
+  border-radius: 15px;
 }
 
 .user-details {
@@ -19,6 +22,10 @@ body {
   align-items: flex-start;
   width: 100%;
   padding: 20px;
+  font-family: "Yanone Kaffeesatz", serif;
+  background: black;
+  color: white;
+  border-right: 15px;
 }
 
 .user-details img {
@@ -30,42 +37,53 @@ body {
 
 .user-details .user-info-text {
   flex-grow: 1;
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 /* Стили для кнопок и полей информации о пользователе */
 .user-details mat-card-content {
   display: flex;
   flex-direction: row;
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 /* Стили для заголовка карточки */
 mat-card-title {
   font-size: 24px;
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 /* Стили для текста "Дата рождения" и "Почта" */
 mat-card-content p {
   margin: 8px 0;
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 /* Стили для ссылки "Список друзей пользователя" */
 mat-card-content a {
   text-decoration: none;
-  color: #007bff;
+  color: fuchsia;
+  font-family: "Yanone Kaffeesatz", serif;
 }
 
 #user-news {
   padding: 2em;
+  background: black;
+  color: white;
+  border-radius: 15px;
 }
 
 #user-news .news-item {
   margin: 1em;
   padding: 1em;
-  background-color: #ffffff; /* Фоновый цвет новости - белый */
+  background-color: white;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: left;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для плоского дизайна */
+}
+.news-card{
+  color: black;
 }
 
 #user-news .time {
@@ -83,6 +101,7 @@ div#user-info-container{
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  border-radius: 15px;
 }
 
 button{
